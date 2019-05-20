@@ -22,9 +22,9 @@ namespace WebSocketDemo
         /// </summary>
         private static ConcurrentDictionary<string, WebSocket> _UserDictionary = new ConcurrentDictionary<string, WebSocket>();
 
-        #region 01-增加用户
+        #region 01-增加用户   
         /// <summary>
-        /// 增加用户
+        /// 增加用户aaaa
         /// </summary>
         /// <param name="userKey"></param>
         /// <param name="socket"></param>
