@@ -34,7 +34,7 @@ namespace EFCoreWeb
             });
 
             var a = new DbContextOptions<MyDBContext>();
-            services.AddDbContext<MyDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<MyDBContext>(options => options.UseMySQL("server=192.168.1.5;port=3307;database=nima;uid=root;pwd=123456"));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
