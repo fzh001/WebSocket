@@ -63,7 +63,7 @@ namespace WebSocketDemo.Controllers
                 //某人登陆后，给群里其他人发送提示信息(本人除外)
                 await WebManager.SendLoginSucesssNotice(cancellationToken, $"用户【{this.userKey}】 进入聊天室,当前时间：{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
                 while (socket.State == WebSocketState.Open)
-                {
+                 {
                     ArraySegment<byte> buffer = new ArraySegment<byte>(new byte[2048]);
                     //接受指令
                     WebSocketReceiveResult result = await socket.ReceiveAsync(buffer, cancellationToken);

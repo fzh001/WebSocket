@@ -1,0 +1,44 @@
+﻿@{
+                /**/
+
+                Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var conn = $.connection("/MyConnection");
+            //开启日志
+            conn.logging = true;
+
+            //1. 默认的形式选择
+            conn.start().done(function () {
+
+            });
+
+            //2. 手动指定通讯方式
+            //webSockets、foreverFrame、serverSentEvents、longPolling
+            //conn.start({ transport: 'serverSentEvents' }).done(function () {
+
+            //});
+
+            //3. 手动指定多个通讯方式，按顺序选择(第一个不支持的话，依次往后类推)
+            //conn.start({ transport: ['foreverFrame','webSockets'] }).done(function () {
+
+            //});
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
