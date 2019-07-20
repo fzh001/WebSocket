@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EFCoreLib\EFCoreLib.csproj" />
+    <ProjectReference Include="..\EntityLib\EntityLib.csproj" />
+    <ProjectReference Include="..\QueueHandle\QueueHandle.csproj" />
   </ItemGroup>
 
 </Project>

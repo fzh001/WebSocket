@@ -52,7 +52,10 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<div>
+    <input type="text" id="num"  />
+    <input type="button" value="确定" onclick="add()"/>
+</div>
 <div class="row">
     <div class="col-md-3">
         <h2>Application uses</h2>
@@ -97,3 +100,21 @@
     @item.name;
 
 }
+
+<script>
+
+    function add() {
+        var a = $("#num").val();
+        $.ajax({
+            url: '/Home/SunmitForm',
+            type: 'get',
+            data:{ num: a },
+            success: function (data) { 
+
+                alert(data);
+            }
+
+        })
+
+    }
+</script>

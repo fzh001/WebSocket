@@ -15,7 +15,14 @@ namespace EFTest
             var db = new MyDbContext();
             var data = db.User.Find(1999);
             data.UserName = "测试哈11111111111";
-          //  var A = db.User.Attach(data);
+            var db1 = new MyDbContext();
+            var s = db1.User.Find(1999);
+
+
+
+
+
+            //  var A = db.User.Attach(data);
             // db.Set(data).State = System.Data.Entity.EntityState.Modified;
             var data1 = db.User.Where(a => a.ID == 1999).FirstOrDefault();
            // db.SaveChanges();
